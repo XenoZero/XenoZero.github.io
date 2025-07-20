@@ -1,7 +1,67 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>GitHub Pages Animated</title>
+<style>
+  body {
+    margin: 0;
+    overflow: hidden; /* 防止滚动条出现 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* 确保页面至少占满视口高度 */
+    font-family: Arial, sans-serif;
+    color: white; /* 默认文字颜色 */
+    animation: background-flash 3s forwards; /* 背景动画 */
+  }
+
+  h1, p {
+    position: relative;
+    top: -100px; /* 初始位置在视口上方 */
+    animation: fly-in 1.5s ease-out forwards; /* 文字飞入动画 */
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation-delay: 0.2s; /* H1稍晚一点飞入 */
+  }
+
+  p {
+    font-size: 1.2em;
+    animation-delay: 0.4s; /* P标签再晚一点飞入 */
+  }
+
+  /* 文字飞入动画 */
+  @keyframes fly-in {
+    to {
+      top: 0; /* 飞到中间位置 */
+      transform: translateY(0); /* 确保最终位置是自然居中 */
+    }
+  }
+
+  /* 背景闪烁动画 */
+  @keyframes background-flash {
+    0% { background-color: white; } /* 初始白色 */
+    10% { background-color: red; }
+    20% { background-color: white; }
+    30% { background-color: red; }
+    40% { background-color: white; }
+    50% { background-color: red; }
+    60% { background-color: white; }
+    70% { background-color: red; }
+    80% { background-color: white; }
+    90% { background-color: red; }
+    100% { background-color: red; } /* 最终定格红色 */
+  }
+</style>
+</head>
 <body>
+
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
+
 </body>
 </html>
